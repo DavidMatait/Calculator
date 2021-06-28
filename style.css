@@ -69,12 +69,12 @@ main .div__btn .btn__lightgrey:hover {
   background-color: lightyellow;
   border: 1px solid lightyellow;
 }
-main .div__btn .btn__orangeX, main .div__btn .btn__orange-dot, main .div__btn .btn__orange-, main .div__btn .btn__orange-plus, main .div__btn .btn__orange-equal {
+main .div__btn .btn__orange {
   background-color: orange;
   color: white;
   border: 1px solid orange;
 }
-main .div__btn .btn__orangeX:hover, main .div__btn .btn__orange-dot:hover, main .div__btn .btn__orange-:hover, main .div__btn .btn__orange-plus:hover, main .div__btn .btn__orange-equal:hover {
+main .div__btn .btn__orange:hover {
   background-color: lightsalmon;
   border: 1px solid lightsalmon;
 }
@@ -99,12 +99,12 @@ main .div__bottom-calculator button:hover {
   background-color: lightsteelblue;
   border: 1px solid lightsteelblue;
 }
-main .div__bottom-calculator .btn__orange-equal {
+main .div__bottom-calculator .btn__orange {
   background-color: orange;
   color: white;
   border: 1px solid orange;
 }
-main .div__bottom-calculator .btn__orange-equal:hover {
+main .div__bottom-calculator .btn__orange:hover {
   background-color: lightsalmon;
   border: 1px solid lightsalmon;
 }
