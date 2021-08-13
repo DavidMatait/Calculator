@@ -4,36 +4,43 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Calculator</title>
-  <link rel="stylesheet"href="style.css">
 </head>
-<body>
-  <main>
-    <div class="div__result"><p class="p"></p></div>
-  <div class="div__btn">
-    <button class="btn__lightgrey" id="clear">C</button>
-    <button data-ops="plus-minus" class="btn__lightgrey">+/-</button>
-    <button data-ops="percentage"class="btn__lightgrey">%</button>
-    <button data-ops="divide"class="btn__orange">÷</button>
-    <button class="num" data-num="7">7</button>
-    <button class="num" data-num="8">8</button>
-    <button class="num" data-num="9">9</button>
-    <button data-ops="multiple"class="btn__orange">X</button>
-    <button class="num" data-num="4">4</button>
-    <button class="num" data-num="5">5</button>
-    <button class="num" data-num="6">6</button>
-    <button data-ops="minus"class="btn__orange">-</button>
-    <button class="num" data-num="1">1</button>
-    <button class="num" data-num="2">2</button>
-    <button class="num" data-num="3">3</button>
-    <button data-ops="plus"class="btn__orange">+</button>
+<body class="body">
+
+  <div class="all">
+  <div id="viewer" class="viewer">0</div>
+<div id="calculator" class="calculator">
+
+  <button id="clear" class="clear">AC</button>
+  <button class="ops">+/-</button>
+  <button data-ops="percentage" class="ops">%</button>
+  <button data-ops="divided by" class="ops">/</button>
+
+  <button class="num" data-num="7">7</button>
+  <button class="num" data-num="8">8</button>
+  <button class="num" data-num="9">9</button>
+  <button data-ops="times" class="ops">X</button>
+
+  <button class="num" data-num="4">4</button>
+  <button class="num" data-num="5">5</button>
+  <button class="num" data-num="6">6</button>
+  <button data-ops="minus" class="ops">-</button>
+
+  <button class="num" data-num="1">1</button>
+  <button class="num" data-num="2">2</button>
+  <button class="num" data-num="3">3</button>
+  <button data-ops="plus" class="ops">+</button>
+
+</div>
+
+  <div class="bottom">
+  <button class="num0" data-num="0">0</button>
+  <button class="num" data-num=".">.</button>
+  <button id="equals" class="equals" data-result="">=</button>
   </div>
-    <div class="div__bottom-calculator">
-      <button class="0">0</button>
-      <button>.</button>
-      <button id="equal"class="btn__orange">=</button>
-    </div>
-  </main>
-<script src="./app.js"></script>
+</div>
+<script src="app.js"></script>
 </body>
 </html>
