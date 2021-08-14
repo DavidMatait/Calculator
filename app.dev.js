@@ -66,6 +66,10 @@
       case "percentage":
         resultNum = oldNum / 100;
         break;
+
+      case "root":
+        resultNum = Math.sqrt(oldNum);
+        break;
       // If equal is pressed without an operator, keep the number
 
       default:
@@ -83,7 +87,11 @@
 
 
     viewer.innerHTML = resultNum;
-    equals.setAttribute("data-result", resultNum);
+    equals.setAttribute("data-result", resultNum); // Limit output length 
+
+    if (viewer.innerHTML.length >= 6) {
+      viewer.innerHTML = viewer.innerHTML.substr(0, 6);
+    }
   }; // Clear button
 
 
@@ -92,8 +100,10 @@
     theNum = "";
     viewer.innerHTML = "0";
     equals.setAttribute("data-result", resultNum);
-  }; // Click number
+  }; // Clear button
 
+
+  el("#clear").onclick = clearAll; // Click number
 
   for (var i = 0, l = nums.length; i < l; i++) {
     nums[i].onclick = setNum;
@@ -105,14 +115,7 @@
   } // Equal sign operator
 
 
-  equals.onclick = displayNum; // Limit numbers
+  equals.onclick = displayNum; // +/- button
 
-  var max_chars = 5;
-
-  if (displayNum.innerHMTL.length > max_chars) {
-    displayNum.innerHTML = displayNum.innerHTML.substr(0, max_chars);
-  } // Clear button
-
-
-  el("#clear").onclick = clearAll;
+  negative.onclick = PlusMinus;
 })();

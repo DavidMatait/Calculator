@@ -69,6 +69,10 @@
         resultNum = oldNum / 100;
         break;
 
+      case "root":
+        resultNum = Math.sqrt(oldNum);
+        break;
+
         // If equal is pressed without an operator, keep the number
       default:
         resultNum = theNum;
@@ -87,6 +91,11 @@
     viewer.innerHTML = resultNum;
     equals.setAttribute("data-result", resultNum);
 
+    // Limit output length 
+    if(viewer.innerHTML.length>=6){
+      viewer.innerHTML = viewer.innerHTML.substr(0,6);
+    }
+
   };
 
   // Clear button
@@ -97,8 +106,9 @@
     equals.setAttribute("data-result", resultNum);
   };
 
+   // Clear button
+   el("#clear").onclick = clearAll;
  
-
   // Click number
   for (let i = 0, l = nums.length; i < l; i++) {
     nums[i].onclick = setNum;
@@ -112,14 +122,8 @@
   // Equal sign operator
   equals.onclick = displayNum;
 
-  // Limit numbers
- let max_chars=5
+  // +/- button
 
-  if(displayNum.innerHMTL.length > max_chars) {
-      displayNum.innerHTML = displayNum.innerHTML.substr(0, max_chars);
-  }
-
-  // Clear button
-  el("#clear").onclick = clearAll;
+  negative.onclick=PlusMinus;
 
 }());

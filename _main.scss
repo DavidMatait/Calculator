@@ -18,10 +18,11 @@ border:2px solid white;
   display:flex;
   justify-content: flex-end;
   align-items: center;
-  width:20vw;
+  width:16vw;
   height:7vh;
   color:white;
   font-size: 70px;
+
 }
 
 .bottom{
@@ -38,15 +39,15 @@ border:2px solid white;
      color:white;
      font-weight: bold;
      font-size:25px;
-     border:2px solid gray;
-     background-color: gray;
+     border:2px solid orange;
+     background-color: orange;
      border-radius: 40px;
      width:70px;
      height: 70px;
 
      &:hover{
-       background-color:lightgray;
-       border:2px solid lightgray;
+       background-color:orangered;
+       border:2px solid orangered;
      }
    }
 
@@ -55,32 +56,32 @@ border:2px solid white;
     color:white;
     font-weight: bold;
     font-size:25px;
-    border:2px solid orange;
-    background-color: orange;
+    border:2px solid gray;
+    background-color: gray;
     border-radius: 40px;
     width:70px;
     height: 70px;
 
     &:hover{
-      background-color:orangered;
-      border:2px solid orangered;
+      background-color:lightgray;
+      border:2px solid lightgray;
     }
   }
 
-  .num0{
+  #num0{
     margin:5px;
     color:white;
     font-weight: bold;
     font-size:25px;
-    border:2px solid orange;
-    background-color: orange;
+    border:2px solid gray;
+    background-color: gray;
     border-radius: 40px;
-    width:150px;
+    width:155px;
     height: 70px;
 
     &:hover{
-      background-color:orangered;
-      border:2px solid orangered;
+      background-color:lightgray;
+      border:2px solid lightgray;
     }
   }
 
