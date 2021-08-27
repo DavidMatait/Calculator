@@ -80,3 +80,19 @@
   background-color: lightgray;
   border: 2px solid lightgray;
 }
+
+@media screen and (max-width: 480px) {
+  .viewer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 81vw;
+    height: 7vh;
+    color: white;
+    font-size: 70px;
+  }
+
+  .all {
+    padding: 10px;
+  }
+}
