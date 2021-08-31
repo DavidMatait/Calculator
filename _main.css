@@ -43,7 +43,9 @@
   border-radius: 40px;
   width: 70px;
   height: 70px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .ops:hover, .clear:hover, .equals:hover {
   background-color: orangered;
