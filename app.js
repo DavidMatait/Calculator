@@ -17,6 +17,7 @@
    let equals = el("#equals");
    let nums = el(".num");
    let ops = el(".ops"); 
+   let dot = el("#dot");
    let theNum = ""; 
    let oldNum = "";
    let resultNum; 
@@ -30,7 +31,7 @@
     } else { 
       theNum += this.getAttribute("data-num");
     }
-    viewer.innerHTML = theNum; 
+    viewer.innerHTML = theNum.substr(0,8); 
   };
 
   // call operator and pass current number to old number
@@ -81,9 +82,9 @@
     // Error(e.g. double press on operators or dividing from 0) and infinity handling
     if (!isFinite(resultNum)) {
       if (isNaN(resultNum)) { 
-        resultNum = "Infinity!";
+        resultNum = "Infinity";
       } else {
-        resultNum = "Stop dividing from 0, this does not work!";
+        resultNum = "Nope!";
       }
     }
 
@@ -93,7 +94,7 @@
 
     // Limit output length 
     if(viewer.innerHTML.length>=6){
-      viewer.innerHTML = viewer.innerHTML.substr(0,6);
+      viewer.innerHTML = viewer.innerHTML.substr(0,8);
     }
 
   };
@@ -121,9 +122,5 @@
 
   // Equal sign operator
   equals.onclick = displayNum;
-
-  // +/- button
-
-  negative.onclick=PlusMinus;
 
 }());

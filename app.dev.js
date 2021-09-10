@@ -17,6 +17,7 @@
   var equals = el("#equals");
   var nums = el(".num");
   var ops = el(".ops");
+  var dot = el("#dot");
   var theNum = "";
   var oldNum = "";
   var resultNum;
@@ -30,7 +31,7 @@
       theNum += this.getAttribute("data-num");
     }
 
-    viewer.innerHTML = theNum;
+    viewer.innerHTML = theNum.substr(0, 8);
   }; // call operator and pass current number to old number
 
 
@@ -79,9 +80,9 @@
 
     if (!isFinite(resultNum)) {
       if (isNaN(resultNum)) {
-        resultNum = "Infinity!";
+        resultNum = "Infinity";
       } else {
-        resultNum = "Stop dividing from 0, this does not work!";
+        resultNum = "Nope!";
       }
     } // Display result and reset old number
 
@@ -90,7 +91,7 @@
     equals.setAttribute("data-result", resultNum); // Limit output length 
 
     if (viewer.innerHTML.length >= 6) {
-      viewer.innerHTML = viewer.innerHTML.substr(0, 6);
+      viewer.innerHTML = viewer.innerHTML.substr(0, 8);
     }
   }; // Clear button
 
@@ -115,7 +116,5 @@
   } // Equal sign operator
 
 
-  equals.onclick = displayNum; // +/- button
-
-  negative.onclick = PlusMinus;
+  equals.onclick = displayNum;
 })();
